@@ -44,7 +44,6 @@ class Search extends Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    console.log(this.props);
     this.setState({
       suggestions: getSuggestions(value, this.props.filteredCourses),
     });

@@ -1,33 +1,73 @@
 .time {
   font-family: Helvetica, sans-serif;
   font-size: 12px;
-}
-.time-container {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  position: relative;
-  top: 20px;
-  width: 100px;
-  border-right: 1px solid #bdb7b7;
-  overflow: visible; /* why is AM below for the times */
-}
-.time {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
+.time-container {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  position: relative;
+  top: 40px;
+  left: 50px;
+  width: 100px;
+  border: 1px solid #96a9c2;
+  background-color: #d4e0f0;
+  overflow: visible; /* why is AM below for the times */
+}
+
+.time:after { /* extends the grid lines for each time */
+  content:"";
+  display:block;
+  margin: 0 auto;
+  position: absolute;
+  left: 1px;
+  padding: 9px;
+  height: 1px;
+  width: 1135%;
+  border-bottom: 1px dashed #96a9c2;
+  opacity: 0.6;
+}
+
 .day-container {
   display: flex;
   flex-direction: row;
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+
+.day-container:after {
+  content:"";
+  display:block;
+  margin: 0 auto;
+  position: absolute;
+  height: 20px;
+  width: 1050px;
+  border: 1px solid #96a9c2;
+  opacity: 0.6;
 }
 
 .day {
-  border-right: 1px solid #bdb7b7;
-  height: 870px;
+  height: 5px;
   display: flex;
   flex-direction: column;
+  padding-top: 1px;
   width: 210px;
   text-align: center;
+  font-size: 15px;
+}
+
+.day:after {
+  content:"";
+  display:block;
+  margin: 0 auto;
+  position: absolute;
+  top: 1px;
+  height: 882px;
+  width: 210px;
+  border-right: 1px dashed #96a9c2;
 }

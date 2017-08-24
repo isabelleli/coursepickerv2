@@ -1,7 +1,11 @@
 .courseBlock {
   position: absolute;
-  background-color: #a6cff1;
-  border: thick solid #bdb7b7;
+  border-radius: 5px;
   text-align: center;
-  /*top: 170px;*/
+  opacity: 0.7;
+  overflow: auto;
+}
+.courseTitle {
+  font-weight: bold;
+  font-size: 17px;
 }

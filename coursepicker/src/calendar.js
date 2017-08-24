@@ -73,21 +73,24 @@ class Calendar extends Component {
   }
 
   makeCourseBlock = (course, day, time, index) => {
+    console.log(time);
     var timeDiff = determineTimeDifference(time);
     var dayIndex = getDayIndex(day);
-    var hourIndex = getHourIndex(time.split('-')[0]) //only get the first time
+    var hourIndex = getHourIndex(time.split('-')[0]); //only get the first time
+    var colorChoices = ['#f7e87f', '#f7cb7f', '#a6cff1', '#b0f1cc', '#f6a2eb',
+                    '#f7837f','#7f9df7','#6aa2ec'];
     var divStyle = {
-      top: 105 + 53*hourIndex,
-      left: 118 + 210*dayIndex,
+      top: 133 + 53*hourIndex,
+      left: 173 + 210*dayIndex,
       height: (timeDiff/60.0) * 50,
-      width: 185
+      width: 185,
+      backgroundColor: colorChoices[index%colorChoices.length]
     };
-
     return (
-        <div className="courseBlock" key={index} style={divStyle}
+        <div className="courseBlock" key={course.crn + ' ' + day}
+          style={divStyle}
           onClick={this.createPopup.bind(this, course)}>
-          {course.title}
-          <br />
+          <div className="courseTitle">{course.title}</div>
           {course.name}
         </div>
     );
@@ -122,7 +125,7 @@ class Calendar extends Component {
 
   addCourse = (c, index) => {
     return (
-      c.days.map((day, i) => this.makeCourseBlock(c, day, c.times[i]), index)
+      c.days.map((day, i) => this.makeCourseBlock(c, day, c.times[i], index))
     );
   }
 
