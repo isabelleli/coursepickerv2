@@ -1,0 +1,33 @@
+.time {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+}
+.time-container {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  position: relative;
+  top: 20px;
+  width: 100px;
+  border-right: 1px solid #bdb7b7;
+  overflow: visible; /* why is AM below for the times */
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.day-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.day {
+  border-right: 1px solid #bdb7b7;
+  height: 870px;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  text-align: center;
+}
