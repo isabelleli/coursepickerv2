@@ -63,17 +63,13 @@ function getHourIndex(startTime) {
 class Calendar extends Component {
   constructor() {
     super();
-    this.state = {
-      currentCourse: null
-    };
-    this.makeCourseBlock=this.makeCourseBlock.bind(this);
-    this.addCourse=this.addCourse.bind(this);
+    // this.makeCourseBlock=this.makeCourseBlock.bind(this);
+    // this.addCourse=this.addCourse.bind(this);
     this.createPopup=this.createPopup.bind(this);
-    this.deleteCourse=this.deleteCourse.bind(this);
+    // this.deleteCourse=this.deleteCourse.bind(this);
   }
 
   makeCourseBlock = (course, day, time, index) => {
-    console.log(time);
     var timeDiff = determineTimeDifference(time);
     var dayIndex = getDayIndex(day);
     var hourIndex = getHourIndex(time.split('-')[0]); //only get the first time
