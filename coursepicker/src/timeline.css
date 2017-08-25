@@ -1,82 +1,47 @@
 .time {
   font-family: Helvetica, sans-serif;
-  font-size: 1em; /* 12px */
-  display: flex;
-  flex-direction: column;
-  height: 3em; /*around 50px*/
-  /*border-bottom: 1px solid #96a9c2;*/
-  margin-top: -9px;
-  /*background-color: #d4e0f0;*/
-  /*padding: 0 500px;*/
-  text-align: center;
-}
-
-/* extends the grid lines for each time */
-.time:after {
-  content:"";
-  display:block;
-  margin-top: -9px;
-  position: absolute;
-  left: 100%;
-  height: 1px;
-  width: 1053%;
-  border-top: 1px dashed #96a9c2;
-  opacity: 0.6;
+  font-size: 15px;
+  top: 10%;
+  height: 100px;
+  border-top: 1px dotted #96a9c2;
 }
 
 .time-container {
   display: flex;
   flex-direction: column;
-  float: left;
   position: absolute;
   bottom: 0px;
-  top: 17%; /*100px*/
-  left: 3%; /*30px*/
-  width: 8%; /*100px*/
-  height: 102%; /*60px*/
-  border-right: 1px solid #96a9c2;
-  background-color: #d4e0f0;
+  top: 20%; /*100px*/
+  left: 5%; /*30px*/
+  width: 87%; /*100px*/
+  height: 100%;
+}
+
+.grid-lines {
+  width: 85%;
+  background-color: black;
 }
 
 .day-container {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 14%; /*20px*/
-  left: 11%; /*122px*/
-  width: 99%;
-}
-
-.day-container:after {
-  content:"";
-  display:block;
-  margin: 0 auto;
-  position: absolute;
-  height: 350%;
-  width: 85%; /*1050px*/
+  left:12%;
+  top: 15%;
+  height: 105%;
+  width: 80%;
   border-left: 1px solid #96a9c2;
-  border-top: 1px solid #96a9c2;
-  opacity: 0.6;
 }
 
 .day {
-  height: 5px;
+  font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   padding-top: 1px;
-  width: 17%; /*210px*/
+  width: 50%; /*210px*/
   text-align: center;
   font-size: 15px;
-  border-right: 1px solid black;
-}
-
-.day:after {
-  content:"";
-  display:block;
-  margin: 0 auto;
-  position: absolute;
-  top: 1px;
-  height: 10070%; /*882px*/
-  width: 17%; /*210px*/
-  border-right: 1px dashed #96a9c2;
+  border-right: 1px solid #96a9c2;
+  border-top: 1px solid #96a9c2;
+  border-bottom: 1px solid #96a9c2;
 }

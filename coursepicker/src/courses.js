@@ -35,9 +35,10 @@ const determineTimeConflicts = (currentlyScheduled,course) => {
         var timeRange = c.times[dayIndex1].split('-');
         var time1 = convertToMinutes(convertToMilitary(timeRange[0]));
         var time2 = convertToMinutes(convertToMilitary(timeRange[1]));
-        var courseTime = convertToMinutes(convertToMilitary(course.times[dayIndex2].split('-')[0]));
-        console.log(courseTime);
-        if (courseTime >= time1 && courseTime <= time2) {
+        var courseTime1 = convertToMinutes(convertToMilitary(course.times[dayIndex2].split('-')[0]));
+        var courseTime2 = convertToMinutes(convertToMilitary(course.times[dayIndex2].split('-')[1]));
+        var timeIntersect = _.intersection(_.range(time1, time2), _.range(courseTime1, courseTime2));
+        if (timeIntersect.length > 0) {
           return false;
         }
       }

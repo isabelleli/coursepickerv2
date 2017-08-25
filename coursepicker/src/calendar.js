@@ -76,10 +76,10 @@ class Calendar extends Component {
     var colorChoices = ['#f7e87f', '#f7cb7f', '#a6cff1', '#b0f1cc', '#f6a2eb',
                     '#f7837f','#7f9df7','#6aa2ec'];
     var divStyle = {
-      top: 100 + 39*hourIndex,
-      left: 148 + 213*dayIndex,
-      height: (timeDiff/60.0) * 40,
-      width: 200,
+      top: 118 + 37*hourIndex,
+      left: 162 + 202*dayIndex,
+      height: (timeDiff/60.0) * 38,
+      width: 180,
       backgroundColor: colorChoices[index%colorChoices.length]
     };
     return (

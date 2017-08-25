@@ -9,7 +9,7 @@
   overflow: auto;
   display: none;
   background: rgba(0, 0, 0, .1);
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .mm-popup--visible {
