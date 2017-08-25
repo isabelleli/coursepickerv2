@@ -1,10 +1,11 @@
 .courseBlock {
   position: absolute;
   border-radius: 5px;
-  text-align: center;
   opacity: 0.7;
-  overflow: auto;
+  text-align: center;
+  font-size: 12px;
 }
+
 .courseTitle {
   font-weight: bold;
   font-size: 17px;

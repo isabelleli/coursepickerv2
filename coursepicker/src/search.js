@@ -9,7 +9,7 @@ const getSuggestions = (value, filteredCourses) => {
 
   return inputLength === 0 ? [] : filteredCourses.filter(course =>
     course.title.toLowerCase().slice(0, inputLength) === input ||
-    course.name.toLowerCase().slice(0, inputLength) === input
+    course.crn.slice(0, inputLength) === input
   );
 };
 
@@ -51,6 +51,7 @@ class Search extends Component {
 
   onSuggestionsClearRequested = () => {
     this.setState({
+      value: '',
       suggestions: []
     });
   };
