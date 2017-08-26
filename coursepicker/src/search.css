@@ -4,7 +4,7 @@ body {
 
 .react-autosuggest__container {
   position: absolute;
-  left: 40%;
+  left: 500px;
 }
 
 .react-autosuggest__input {
