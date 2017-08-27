@@ -1,0 +1,14 @@
+.button {
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  top: 15px;
+  left: 1040px;
+  background-color: #a8bedd;
+  border: none;
+}
+.button:hover {
+  cursor: pointer;
+}

@@ -87,8 +87,8 @@ class Calendar extends Component {
           style={divStyle}
           onClick={this.createPopup.bind(this, course, day, time)}>
           <div className="courseTitle">{course.title}</div>
-          {/* {'Time: ' + time} */}
-          {course.name}
+          {/* <a className='delete' href="#" onClick={this.deleteCourse}> X </a> */}
+          <div className="courseName">{course.name}</div>
         </div>
     );
   }
@@ -141,8 +141,7 @@ class Calendar extends Component {
       <div>
         <Timeline />
         {this.props.courses.map((c, index) => this.addCourse(c, index))}
-        <Popup className="mm-popup"
-        btnClass="mm-popup__btn"/>
+        <Popup className="mm-popup" btnClass="mm-popup__btn"/>
       </div>
     )
   }

@@ -9,6 +9,17 @@
   font-family: Helvetica, sans-serif;
 }
 
+.courseBlock:hover {
+  cursor: pointer;
+}
+/*.delete, .courseTitle {
+  display: inline-block;
+}
+
+.delete {
+  float: right;
+}*/
+
 .courseTitle {
   font-weight: bold;
   font-size: 17px;
