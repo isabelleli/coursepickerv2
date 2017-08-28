@@ -7,8 +7,10 @@ import './index.css';
 
 ReactDOM.render(
   <div>
-    <img className="logo" src={require('./wellesley.png')}
-        />
+    <a href='https://courses.wellesley.edu/' target="_blank"
+    rel="noopener noreferrer">
+    <img className="logo" alt="wellesley logo"
+      src={require('./wellesley.png')}></img></a>
     <Report />
     <Courses />
   </div>,

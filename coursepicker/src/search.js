@@ -64,7 +64,7 @@ class Search extends Component {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'Type a course title or name',
+      placeholder: 'Type a course title or CRN',
       value,
       onChange: this.onChange
     };

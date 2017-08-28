@@ -36,6 +36,7 @@ body {
   position: absolute;
   top: 51px;
   width: 280px;
+  height: 200px;
   border: 1px solid #aaa;
   background-color: #fff;
   font-family: Helvetica, sans-serif;
@@ -44,6 +45,7 @@ body {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   z-index: 2;
+  overflow-y: scroll;
 }
 
 .react-autosuggest__suggestions-list {

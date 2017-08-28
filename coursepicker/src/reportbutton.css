@@ -6,8 +6,12 @@
   height: 40px;
   top: 15px;
   left: 1040px;
-  background-color: #a8bedd;
-  border: none;
+  background-color: #063271;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+  line-height: 40px;
 }
 .button:hover {
   cursor: pointer;

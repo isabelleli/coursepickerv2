@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 import Popup from 'react-popup';
 import Timeline from './timeline.js';
 import './calendar.css';
@@ -20,7 +19,7 @@ function convertToMilitary(t) { //format is: "08:30 AM"
     var timeOnly = t.replace('PM', '').trim();
     var separateTime = timeOnly.split(':')
     if (separateTime[0] !== '12') {
-      var newHour = parseInt(separateTime[0]) + 12;
+      var newHour = parseInt(separateTime[0], 10) + 12;
       return newHour.toString() + ':' + separateTime[1];
     } else {
       return timeOnly;
@@ -30,17 +29,17 @@ function convertToMilitary(t) { //format is: "08:30 AM"
 
 function convertToMinutes(t) {
   var time = t.split(':');
-  return (parseInt(time[0])*60)+ parseInt(time[1]);
+  return (parseInt(time[0], 10)*60)+ parseInt(time[1], 10);
 }
 
 function getDayIndex(day) {
   var days = ["M", "T", "W", "TH", "F"];
-  if (day.includes('W')) {
-    return 2;
-  }
-  else {
-    return days.indexOf(day);
-  }
+  // if (day.includes('W')) { //only applicable for old parsed-courses file
+  //   return 2;
+  // }
+  // else {
+  return days.indexOf(day);
+  // }
 }
 
 function getHourIndex(startTime) {
@@ -61,13 +60,6 @@ function getHourIndex(startTime) {
 }
 
 class Calendar extends Component {
-  constructor() {
-    super();
-    // this.makeCourseBlock=this.makeCourseBlock.bind(this);
-    // this.addCourse=this.addCourse.bind(this);
-    this.createPopup=this.createPopup.bind(this);
-    // this.deleteCourse=this.deleteCourse.bind(this);
-  }
 
   makeCourseBlock = (course, day, time, index) => {
     var timeDiff = determineTimeDifference(time);
@@ -83,21 +75,22 @@ class Calendar extends Component {
       backgroundColor: colorChoices[index%colorChoices.length]
     };
     return (
-        <div className="courseBlock" key={course.crn + ' ' + day}
-          style={divStyle}
-          onClick={this.createPopup.bind(this, course, day, time)}>
+        <div className="courseBlock" key={course.crn + day + time}
+          style={divStyle} onClick={this.createPopup.bind(this, course, day, time)}>
           <div className="courseTitle">{course.title}</div>
-          {/* <a className='delete' href="#" onClick={this.deleteCourse}> X </a> */}
           <div className="courseName">{course.name}</div>
         </div>
     );
   }
 
-  createPopup(course, day, time) {
+    createPopup = (course, day, time) => {
 
     var content = 'Title: ' + course.title + '\n' + 'Name: ' + course.name + '\n' +
                  'Professor(s): ' + course.professors + '\n' + 'CRN: ' + course.crn +
                  '\n' + 'Time: ' + day + ' ' + time;
+    if (day === 'W' && course.alt !== undefined) {
+      content += '\n' + 'Alternative Wednesday: ' + course.alt;
+    }
     Popup.create({
       title: null,
       content: content,

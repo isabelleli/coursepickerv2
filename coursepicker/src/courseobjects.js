@@ -1,4 +1,3 @@
-import React from 'react';
 import courses from './parsed-courses.json';
 
 function courseObjects() {
@@ -9,7 +8,8 @@ function courseObjects() {
       name: course['Course Name'],
       professors: course['Professor(s)'],
       days: course['Day(s)'],
-      times: course['Time(s)']
+      times: course['Time(s)'],
+      alt: course['Alternative Wednesday']
     }))
   );
 }

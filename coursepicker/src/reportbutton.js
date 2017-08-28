@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './reportbutton.css';
 
 class Report extends Component {
-  handleClick = () => window.location.assign('https://goo.gl/FvoS8z');
-
   render() {
     return (
-      <button onClick={this.handleClick}
-      className="button"> Report Issues </button>
+      <a href='https://goo.gl/FvoS8z' target="_blank" rel="noopener noreferrer"
+      className='button'>
+        Report Issues
+      </a>
     );
   };
 }
