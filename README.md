@@ -7,3 +7,4 @@ A Wellesley Course Scheduler allows the user to select Wellesley courses and see
 [This](https://isabelleli.github.io/coursepickerv2/) is the working static site.
 
 Here is an example of what a schedule might look like:
+![alt text](https://github.com/coursepickerv2/sample_images/example.png "Example Schedule")
