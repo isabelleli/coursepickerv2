@@ -1,4 +1,4 @@
-import courses from './parsed-courses.json';
+import courses from './files/parsed-courses.json';
 
 function courseObjects() {
   return (

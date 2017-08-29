@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
 // import courseObjects from './courseobjects';
-import './search.css';
+import './styles/Search.css';
 
 const getSuggestions = (value, filteredCourses) => {
   const input = value.toLowerCase();

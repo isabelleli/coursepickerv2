@@ -1,3 +1,14 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: 150px;
+}
+
 .button {
   font-family: Helvetica, sans-serif;
   font-size: 15px;
@@ -12,7 +23,4 @@
   color: white;
   vertical-align: middle;
   line-height: 40px;
-}
-.button:hover {
-  cursor: pointer;
 }

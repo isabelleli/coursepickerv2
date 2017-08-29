@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Search from './search.js';
-import Calendar from './calendar.js';
-import courseObjects from './courseobjects';
+import Search from './Search.js';
+import Calendar from './Calendar.js';
+import courseObjects from './courseObjects';
 var _ = require('lodash');
 
 function convertToMilitary(t) { //format is: "08:30 AM"

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Popup from 'react-popup';
-import Timeline from './timeline.js';
-import './calendar.css';
-import './Popup.css';
+import Timeline from './Timeline.js';
+import './styles/Calendar.css';
+import './styles/Popup.css';
 
 function determineTimeDifference(t) {
   var timePeriod = t.split('-');
