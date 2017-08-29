@@ -4,6 +4,7 @@ import Timeline from './Timeline.js';
 import './styles/Calendar.css';
 import './styles/Popup.css';
 
+// returns the difference in minutes between the start and end time of a course
 function determineTimeDifference(t) {
   var timePeriod = t.split('-');
   var time1 = convertToMinutes(convertToMilitary(timePeriod[0]));
@@ -29,7 +30,7 @@ function convertToMilitary(t) { //format is: "08:30 AM"
 
 function convertToMinutes(t) {
   var time = t.split(':');
-  return (parseInt(time[0], 10)*60)+ parseInt(time[1], 10);
+  return (parseInt(time[0], 10)*60) + parseInt(time[1], 10);
 }
 
 function getDayIndex(day) {
@@ -55,8 +56,6 @@ function getHourIndex(startTime) {
   }
   var diff = convertedTime - times[closestTimeIndex-1];
   return (closestTimeIndex-1) + (diff/60.0);
-
-
 }
 
 class Calendar extends Component {
@@ -140,4 +139,4 @@ class Calendar extends Component {
   }
 }
 
-export default Calendar;
+export default Calendar

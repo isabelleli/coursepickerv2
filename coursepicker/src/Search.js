@@ -32,8 +32,6 @@ class Search extends Component {
       value: '',
       suggestions: [],
     };
-    this.onSuggestionsFetchRequested=this.onSuggestionsFetchRequested.bind(this);
-    this.onSuggestionSelected=this.onSuggestionSelected.bind(this);
   }
 
 
@@ -45,7 +43,7 @@ class Search extends Component {
 
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: getSuggestions(value, this.props.filteredCourses),
+      suggestions: getSuggestions(value, this.props.filteredCourses), //takes pre-filtered Courses
     });
   };
 
