@@ -3,27 +3,8 @@ import Search from './Search.js';
 import Calendar from './Calendar.js';
 import courseObjects from './courseObjects';
 import { range, intersection } from 'lodash';
+import { convertToMilitary, convertToMinutes } from './constants';
 
-function convertToMilitary(t) { //format is: "08:30 AM"
-  if (t.includes('AM')) {
-    return t.replace('AM', '').trim();
-  }
-  else {
-    var timeOnly = t.replace('PM', '').trim();
-    var separateTime = timeOnly.split(':')
-    if (separateTime[0] !== '12') {
-      var newHour = parseInt(separateTime[0], 10) + 12;
-      return newHour.toString() + ':' + separateTime[1];
-    } else {
-      return timeOnly;
-      }
-    }
-  }
-
-function convertToMinutes(t) {
-  var time = t.split(':');
-  return (parseInt(time[0], 10)*60)+ parseInt(time[1], 10);
-}
 
 const getMatchingIndices = (listDays, match) => { //gets the indices of all elements that are equal to match param
   var indices = [];

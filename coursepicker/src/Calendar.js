@@ -3,6 +3,8 @@ import Popup from 'react-popup';
 import Timeline from './Timeline.js';
 import './styles/Calendar.css';
 import './styles/Popup.css';
+import { convertToMilitary, convertToMinutes, COLORS } from './constants';
+import { MILITARY_TIMES, DAYS } from './constants';
 
 // returns the difference in minutes between the start and end time of a course
 function determineTimeDifference(t) {
@@ -12,49 +14,25 @@ function determineTimeDifference(t) {
   return time2-time1;
 }
 
-function convertToMilitary(t) { //format is: "08:30 AM"
-  if (t.includes('AM')) {
-    return t.replace('AM', '').trim();
-  }
-  else {
-    var timeOnly = t.replace('PM', '').trim();
-    var separateTime = timeOnly.split(':')
-    if (separateTime[0] !== '12') {
-      var newHour = parseInt(separateTime[0], 10) + 12;
-      return newHour.toString() + ':' + separateTime[1];
-    } else {
-      return timeOnly;
-      }
-    }
-  }
-
-function convertToMinutes(t) {
-  var time = t.split(':');
-  return (parseInt(time[0], 10)*60) + parseInt(time[1], 10);
-}
-
 function getDayIndex(day) {
-  var days = ["M", "T", "W", "TH", "F"];
   // if (day.includes('W')) { //only applicable for old parsed-courses file
   //   return 2;
   // }
   // else {
-  return days.indexOf(day);
+  return DAYS.indexOf(day);
   // }
 }
 
 function getHourIndex(startTime) {
-  var times = [510, 570, 630, 690, 750, 810, 870, 930, 990, 1050, 1110,
-                1170, 1230, 1290, 1350, 1410];
   var convertedTime = convertToMinutes(convertToMilitary(startTime));
   var closestTimeIndex = 0;
-  for (var i = 0; i < times.length; i++) {
-    if (convertedTime < times[i]) {
+  for (var i = 0; i < MILITARY_TIMES.length; i++) {
+    if (convertedTime < MILITARY_TIMES[i]) {
       closestTimeIndex = i;
       break;
     }
   }
-  var diff = convertedTime - times[closestTimeIndex-1];
+  var diff = convertedTime - MILITARY_TIMES[closestTimeIndex-1];
   return (closestTimeIndex-1) + (diff/60.0);
 }
 
@@ -64,14 +42,13 @@ class Calendar extends Component {
     var timeDiff = determineTimeDifference(time);
     var dayIndex = getDayIndex(day);
     var hourIndex = getHourIndex(time.split('-')[0]); //only get the first time
-    var colorChoices = ['#f7e87f', '#f7cb7f', '#a6cff1', '#b0f1cc', '#f6a2eb',
-                    '#f7837f','#7f9df7','#6aa2ec'];
+
     var divStyle = {
       top: 120 + 37*hourIndex,
       left: 162 + 202*dayIndex,
       height: (timeDiff/60.0) * 38,
       width: 180,
-      backgroundColor: colorChoices[index%colorChoices.length]
+      backgroundColor: COLORS[index%COLORS.length]
     };
     return (
         <div className="courseBlock" key={course.crn + day + time}
