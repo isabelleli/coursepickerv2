@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Popup from 'react-popup';
 import Timeline from './Timeline.js';
+// import CreateBlock from './CreateBlock.js';
 import './styles/Calendar.css';
 import './styles/Popup.css';
 import { convertToMilitary, convertToMinutes, COLORS } from './constants';
@@ -54,7 +55,8 @@ class Calendar extends Component {
         <div className="courseBlock" key={course.crn + day + time}
           style={divStyle} onClick={this.createPopup.bind(this, course, day, time)}>
           <div className="courseTitle">{course.title}</div>
-          <div className="courseName">{course.name}</div>
+          <div className="courseCRN">{course.crn}</div>
+          <div className="courseTime">{time}</div>
         </div>
     );
   }
@@ -108,6 +110,7 @@ class Calendar extends Component {
   render() {
     return (
       <div>
+        {/* <CreateBlock /> */}
         <Timeline />
         {this.props.courses.map((c, index) => this.addCourse(c, index))}
         <Popup className="mm-popup" btnClass="mm-popup__btn"/>

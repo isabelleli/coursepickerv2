@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Courses from './Courses.js';
+// import UserModal from './UserModal.js';
 import './styles/index.css';
 
 ReactDOM.render(

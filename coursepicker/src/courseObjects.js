@@ -1,6 +1,6 @@
-import courses from './files/parsed-courses.json';
+import courses from './files/parsed-courses-s18.json'; //used to be without -s18
 
-function courseObjects() {
+function CourseObjects() {
   return (
     courses.map(course => ({
       crn: course['CRN'],
@@ -14,4 +14,4 @@ function courseObjects() {
   );
 }
 
-export default courseObjects()
+export default CourseObjects()
