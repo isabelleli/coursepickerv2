@@ -1,0 +1,51 @@
+.create-button {
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 8px;
+  left: 700px;
+  text-align: center;
+  text-decoration: none;
+  color: #5e6978;
+  vertical-align: middle;
+  line-height: 50px;
+  border-radius: 5px;
+  border: 1px solid #97adcf;
+}
+
+.create-button:hover {
+  cursor: pointer;
+  background-color: #6c9be0;
+}
+
+.modal {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  /*padding: 20px;*/
+}
+
+.close-button {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  color: #555e6b;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  background-color: #6c9be0;
+}

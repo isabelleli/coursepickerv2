@@ -1,0 +1,9 @@
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}

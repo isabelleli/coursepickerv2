@@ -1,3 +1,13 @@
+
+@media print {
+  .logo, .button, .github-logo {
+    display: none;
+  }
+  @page {
+    size: landscape;
+  }
+}
+
 body {
   font-family: Helvetica, sans-serif;
 }
@@ -6,7 +16,7 @@ body {
   width: 100px;
   height: auto;
   position: absolute;
-  left: 150px;
+  left: 30px;
 }
 
 .button {

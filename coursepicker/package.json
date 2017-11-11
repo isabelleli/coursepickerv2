@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "fullcalendar": "^3.4.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-autosuggest": "^9.3.2",
     "react-big-calendar": "^0.14.4",
     "react-dom": "^15.6.1",
+    "react-modal": "^3.0.4",
     "react-popup": "^0.8.0",
     "react-scripts": "1.0.11",
-    "react-search-input": "^0.11.2"
+    "react-search-input": "^0.11.2",
+    "react-text-input": "0.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
