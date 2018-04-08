@@ -1,4 +1,4 @@
-import courses from './files/parsed-courses-s18.json'; //used to be without -s18
+import courses from './files/parsed-courses-f18.json'; //used to be without -s18
 
 function CourseObjects() {
   return (

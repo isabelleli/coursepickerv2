@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search.js';
 import Calendar from './Calendar.js';
-import CourseObjects from './CourseObjects';
+import CourseObjects from './CourseObjects.js';
 // import UserBlocks from './UserBlocks.js';
 import { convertToMilitary, convertToMinutes, getMatchingIndices } from './constants';
 import { getTimeRange, determineTimeConflicts } from './constants';
