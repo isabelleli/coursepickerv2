@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/coursepickerv2/static/css/main.51593e8c.chunk.css",
+    "main.js": "/coursepickerv2/static/js/main.fa31cc55.chunk.js",
+    "main.js.map": "/coursepickerv2/static/js/main.fa31cc55.chunk.js.map",
+    "runtime~main.js": "/coursepickerv2/static/js/runtime~main.0f5aedcc.js",
+    "runtime~main.js.map": "/coursepickerv2/static/js/runtime~main.0f5aedcc.js.map",
+    "static/js/2.2c044b4e.chunk.js": "/coursepickerv2/static/js/2.2c044b4e.chunk.js",
+    "static/js/2.2c044b4e.chunk.js.map": "/coursepickerv2/static/js/2.2c044b4e.chunk.js.map",
+    "index.html": "/coursepickerv2/index.html",
+    "precache-manifest.4a75589b9ee2d16064bb83961c2383df.js": "/coursepickerv2/precache-manifest.4a75589b9ee2d16064bb83961c2383df.js",
+    "service-worker.js": "/coursepickerv2/service-worker.js",
+    "static/css/main.51593e8c.chunk.css.map": "/coursepickerv2/static/css/main.51593e8c.chunk.css.map",
+    "static/media/wellesley.png": "/coursepickerv2/static/media/wellesley.4ea8bd09.png"
+  }
+}
