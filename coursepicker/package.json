@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "lodash": "^4.17.15",
-    "moment": "^2.18.1",
+    "moment": "^2.29.2",
     "react": "^15.6.1",
     "react-autosuggest": "^9.3.2",
     "react-big-calendar": "^0.14.4",
